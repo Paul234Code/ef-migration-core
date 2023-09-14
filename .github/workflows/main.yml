@@ -9,6 +9,9 @@ on:
 jobs:
   build:   
      runs-on: ubuntu-latest
+     strategy:
+       matrix:
+        os: [ubuntu-latest, window-latest, macOS-latest]
      steps:
        - name: Checkout repository
          uses: actions/checkout@v2
