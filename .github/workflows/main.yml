@@ -1,0 +1,26 @@
+name: Learing Github Actions with ef-core
+on: 
+ push:
+  branches: [master]
+ pull_request:
+   branches: [master]
+
+    
+jobs:
+  build:   
+     runs-on: ubuntu-latest
+     steps:
+       - name: Checkout repository
+         uses: actions/checkout@v2
+     
+  
+  test:
+    runs-on: ubuntu-latest
+    steps:
+     - uses: actions/checkout@v1
+  deploy:
+   runs-on: ubuntu-latest
+   steps:
+     - uses: actions/checkout@v1
+  
+   
